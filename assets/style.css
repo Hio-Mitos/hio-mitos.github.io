@@ -224,6 +224,19 @@ code {
 
 #cusdis_thread { margin-top: 8px; }
 
+/* ---------- Legal documents ---------- */
+
+ol.legal { margin: 28px 0 0; padding-left: 24px; }
+ol.legal > li { margin: 0 0 20px; padding-left: 4px; }
+ol.legal > li::marker { color: var(--muted); font-weight: 600; }
+ol.legal p { margin: 0; }
+
+.copyright {
+  margin: 36px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 /* ---------- Breadcrumb / back link ---------- */
 
 .crumb { padding: 28px 0 0; font-size: 14px; }

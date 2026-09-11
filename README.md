@@ -11,6 +11,7 @@ assets/style.css        Shared stylesheet. Every page links to it.
 authbox/                One folder per app
   index.html              App page: what it does, store link
   privacy.html            Privacy policy (the URL given to the Store)
+  license.html            End User License Agreement
   support.html            Support page (the URL given to the Store)
 _template/              Copy this to start a new app
 privacy_AuthBox.html    Redirect kept alive for the old policy URL
@@ -21,7 +22,7 @@ privacy_AuthBox.html    Redirect kept alive for the old policy URL
 ## Adding a new app
 
 1. `cp -r _template <appname>` (lowercase, no spaces — it becomes the URL).
-2. Replace every `{{PLACEHOLDER}}` in the three files. Search for `{{` to find them all.
+2. Replace every `{{PLACEHOLDER}}` in the four files. Search for `{{` to find them all.
 3. Copy the AuthBox `<li>` block in `index.html`, point it at the new folder and
    update the name, tagline, blurb and Store link.
 4. Commit and push. GitHub Pages rebuilds in about a minute.
@@ -30,6 +31,7 @@ The URLs to paste into Partner Center are then:
 
 - Privacy policy — `https://hio-mitos.github.io/<appname>/privacy.html`
 - Support — `https://hio-mitos.github.io/<appname>/support.html`
+- Licence (if the listing asks for custom terms) — `https://hio-mitos.github.io/<appname>/license.html`
 
 ## Renaming or moving a page
 
