@@ -64,6 +64,57 @@
   shown in the app, what you did, what you expected and what happened instead. Screenshots
   are welcome as long as they do not show a secret key or a QR code.</p>
 
+
+  <h2 id="comments">Questions and comments</h2>
+
+  <div class="notice">
+    <h3>Please read before you post</h3>
+    <p>This comment box is a <strong>temporary measure</strong> while a permanent support
+    channel is set up. It will be replaced, and comments posted here may not be carried
+    over when that happens.</p>
+    <p>It is provided by <a href="https://cusdis.com" rel="noopener">Cusdis</a>, an
+    independent third-party service. <strong>It is not part of AuthBox, and it is not
+    covered by the app's privacy policy.</strong> That policy describes the app, which
+    collects nothing. This box is a different thing: whatever you type here is sent to and
+    stored on Cusdis's servers rather than on your own machine, and — as with any request
+    to any website — Cusdis will also receive ordinary technical details such as your IP
+    address. Their handling of it is governed by their terms, not ours.</p>
+    <p>So please treat anything you post as public and outside our control:</p>
+    <ul>
+      <li>Never post a secret key, a recovery phrase, a seed phrase or your master password.</li>
+      <li>Avoid personal details you would not want a stranger to read.</li>
+      <li>A name is optional — anything that identifies you is your choice to give.</li>
+    </ul>
+    <p>Comments are reviewed before they appear, and replies are posted publicly underneath
+    them. If a question needs private details, please wait for the permanent support
+    channel instead of posting them here.</p>
+  </div>
+
+  <!-- CUSDIS: replace CUSDIS_APP_ID_HERE with the app ID from your Cusdis dashboard. -->
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="CUSDIS_APP_ID_HERE"
+    data-page-id="authbox-support"
+    data-page-url="https://hio-mitos.github.io/authbox/support.html"
+    data-page-title="AuthBox — Support"
+    data-theme="auto"></div>
+  <p id="cusdis_unconfigured" hidden><em>The comment box is not switched on yet. It will
+  appear here shortly.</em></p>
+  <script>
+    (function () {
+      var el = document.getElementById('cusdis_thread');
+      if (el.getAttribute('data-app-id') === 'CUSDIS_APP_ID_HERE') {
+        el.hidden = true;
+        document.getElementById('cusdis_unconfigured').hidden = false;
+        return;
+      }
+      var s = document.createElement('script');
+      s.src = 'https://cusdis.com/js/cusdis.es.js';
+      s.async = true; s.defer = true;
+      document.body.appendChild(s);
+    })();
+  </script>
+
   <footer>
     <a href="../index.html">All apps</a> ·
     <a href="index.html">AuthBox</a> ·
