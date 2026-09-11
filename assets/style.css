@@ -18,8 +18,11 @@
   --maxw: 720px;
 }
 
+/* Dark palette. Applied when the system asks for it, unless the viewer has
+   explicitly chosen light; and always when they have explicitly chosen dark. */
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0e1211;
     --surface: #161b1a;
     --surface-2: #1c2322;
@@ -33,6 +36,23 @@
     --warn-border: #4a3a1e;
   }
 }
+
+:root[data-theme="dark"] {
+  --bg: #0e1211;
+  --surface: #161b1a;
+  --surface-2: #1c2322;
+  --border: #242d2b;
+  --text: #e8edeb;
+  --muted: #9baaa6;
+  --accent: #2dd4a7;
+  --accent-soft: #13302a;
+  --warn: #f0b866;
+  --warn-soft: #2a2013;
+  --warn-border: #4a3a1e;
+}
+
+:root[data-theme="dark"] { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 
@@ -258,4 +278,38 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 520px) {
   header { padding-top: 32px; }
   h1 { font-size: 22px; }
+}
+
+/* ---------- Theme toggle ---------- */
+
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 50;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: block; }
+}
+
+@media (max-width: 520px) {
+  .theme-toggle { top: 10px; right: 10px; width: 34px; height: 34px; }
 }
