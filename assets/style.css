@@ -243,10 +243,6 @@ code {
   background: var(--surface-2);
 }
 
-/* ---------- Comments ---------- */
-
-#cusdis_thread { margin-top: 8px; }
-
 /* ---------- Legal documents ---------- */
 
 ol.legal { margin: 28px 0 0; padding-left: 24px; }

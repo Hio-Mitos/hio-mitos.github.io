@@ -8,8 +8,9 @@ Live at <https://hio-mitos.github.io>.
 ```
 index.html              Homepage — one card per app
 assets/style.css        Shared stylesheet. Every page links to it.
+assets/theme.js         Light/dark toggle. Loaded in <head>, no defer.
 authbox/                One folder per app
-  index.html              App page: what it does, store link
+  index.html              App page: what it does, where to get it
   privacy.html            Privacy policy (the URL given to the Store)
   license.html            End User License Agreement
   support.html            Support page (the URL given to the Store)
@@ -23,8 +24,8 @@ privacy_AuthBox.html    Redirect kept alive for the old policy URL
 
 1. `cp -r _template <appname>` (lowercase, no spaces — it becomes the URL).
 2. Replace every `{{PLACEHOLDER}}` in the four files. Search for `{{` to find them all.
-3. Copy the AuthBox `<li>` block in `index.html`, point it at the new folder and
-   update the name, tagline, blurb and Store link.
+3. Copy the AuthBox `<li class="app-item">` block in `index.html`, point it at the new
+   folder and update the name, tagline, blurb and links.
 4. Commit and push. GitHub Pages rebuilds in about a minute.
 
 The URLs to paste into Partner Center are then:
@@ -39,36 +40,37 @@ Once a URL has been submitted to the Microsoft Store, do not delete it — leave
 redirect at the old path, the way `privacy_AuthBox.html` does. A Store listing
 pointing at a dead privacy policy URL can fail certification.
 
-## Contact address
+## Distribution
 
-`Hio-Mitos@gladiators.city` is the single public contact for every app. It appears on the
+Apps are sold and distributed through the Microsoft Store. No installers — no `.exe`,
+no `.msix` — are committed to this repo or attached to releases. The Store listing is
+the only download route, and the app page links to it.
+
+Until Microsoft certifies a listing, the app page shows a short "being published" note
+in place of the Store button. Replace it with the real link once the listing is live.
+
+## Dates on legal pages
+
+The privacy policy and licence each carry `Effective` and `Last updated` in their header.
+Set both to the day the page is published — never a future date, which reads as a document
+not yet in force and can be queried during Store certification. Afterwards bump only
+`Last updated`, and only when the wording actually changes.
+
+## Contact
+
+`Hio-Mitos@gladiators.city` is the single public contact for every app. It appears in the
 homepage footer and on each app's privacy and support page — grep for `gladiators.city`
 to find every occurrence if it ever changes.
 
-## Styling
+There is no comment system on the site; support goes through that mailbox.
 
-All visual changes belong in `assets/style.css`. Pages carry no CSS of their own,
-so one edit there restyles the whole site. The palette is defined once in `:root`
-and again under `prefers-color-scheme: dark`.
+## Styling and theme
 
-## Distribution
+All visual changes belong in `assets/style.css`. Pages carry no CSS of their own, so one
+edit there restyles the whole site. The palette is defined once in `:root`, again under
+`prefers-color-scheme: dark`, and again under `:root[data-theme="dark"]` so a visitor's
+explicit choice beats their system setting.
 
-Apps are sold and distributed through the Microsoft Store. No installers, `.exe` or
-`.msix` files are committed to this repo or attached to releases — the Store listing is
-the only download route, and the app page links to it.
-
-Until Microsoft certifies a listing, the app page shows a short "being published" note in
-place of the Store button. Replace it with the real link once the listing is live.
-
-## Comments
-
-The support pages embed [Cusdis](https://cusdis.com), a third-party comment widget. It is
-a temporary measure: each support page carries a notice saying so and warning that the
-widget is outside the app's privacy policy.
-
-To switch it on, create a Cusdis app, then replace `CUSDIS_APP_ID_HERE` with the app ID it
-issues (search for it — it appears once per support page). Until that is done the widget
-hides itself and shows "not switched on yet" instead of erroring.
-
-When a permanent support channel replaces it, remove the widget `<div>`, its `<script>`
-and the `.notice` block from each support page.
+`assets/theme.js` draws the toggle button and remembers the choice in `localStorage`.
+It must stay in `<head>` without `defer`, or pages flash the wrong palette before the
+stored theme is applied.
