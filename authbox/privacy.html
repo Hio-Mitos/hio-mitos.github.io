@@ -101,6 +101,8 @@
     a code can be copied without opening the window. AuthBox listens only for the specific
     shortcuts you configure; it does not record or transmit what you type.</li>
     <li><strong>Clipboard</strong>, to place a code on it when you copy one.</li>
+    <!-- VERIFY: packaged builds normally declare a startup task in the manifest
+         rather than writing this registry key. Confirm before publishing. -->
     <li><strong>Startup registry entry</strong>
     (<code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code>), only if
     you turn on “Launch at startup”. This is the same setting Windows' own Task Manager
@@ -109,10 +111,13 @@
 
   <h2>Your control over your data</h2>
   <p>Your data is in files on your own computer, and you can inspect, move, back up or
-  delete them at any time. To delete everything, uninstall AuthBox and delete the vault
-  files (<code>*.authbox</code>) and the small plaintext files listed above. Uninstalling
-  alone deliberately does <em>not</em> delete your vaults, so that reinstalling or
-  upgrading never destroys your accounts.</p>
+  delete them at any time.</p>
+  <p>Uninstalling AuthBox deliberately does <em>not</em> delete your vaults, so that
+  reinstalling or upgrading never destroys your accounts. To remove everything, use
+  <strong>Remove all AuthBox data from this PC</strong> in the app's Settings, which
+  deletes the vault files (<code>*.authbox</code>) and the small plaintext files listed
+  above. You can also delete those files by hand. Files you placed in the AuthBox folder
+  yourself are never touched.</p>
   <p>Because AuthBox holds no data about you, there is nothing for the developer to
   provide, correct or erase on request. Rights such as access, rectification and erasure
   under laws like the GDPR are exercised directly by you, on your own device.</p>
