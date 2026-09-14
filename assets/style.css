@@ -226,6 +226,9 @@ code {
 .btn.secondary { background: var(--surface-2); border-color: var(--border); color: var(--text); font-weight: 500; }
 .btn.secondary:hover { border-color: var(--accent); color: var(--accent); filter: none; }
 
+.download .pending { margin: 0; font-size: 15px; }
+.download .pending strong { display: block; margin-bottom: 4px; }
+
 .checksum {
   margin: 16px 0 0;
   font-size: 13px;

@@ -39,27 +39,26 @@ Once a URL has been submitted to the Microsoft Store, do not delete it — leave
 redirect at the old path, the way `privacy_AuthBox.html` does. A Store listing
 pointing at a dead privacy policy URL can fail certification.
 
+## Contact address
+
+`Hio-Mitos@gladiators.city` is the single public contact for every app. It appears on the
+homepage footer and on each app's privacy and support page — grep for `gladiators.city`
+to find every occurrence if it ever changes.
+
 ## Styling
 
 All visual changes belong in `assets/style.css`. Pages carry no CSS of their own,
 so one edit there restyles the whole site. The palette is defined once in `:root`
 and again under `prefers-color-scheme: dark`.
 
-## Publishing an installer
+## Distribution
 
-Installers are **not** committed to this repo. GitHub rejects any file over 100 MB, and
-Pages is not built to serve large binaries. Put them in a GitHub Release instead:
+Apps are sold and distributed through the Microsoft Store. No installers, `.exe` or
+`.msix` files are committed to this repo or attached to releases — the Store listing is
+the only download route, and the app page links to it.
 
-1. Repo → **Releases** → **Draft a new release**.
-2. Tag: `<appname>-v<version>`, e.g. `authbox-v1.0.0`. Target `main`.
-3. Drag the `.exe` into the attachments box. Releases allow up to 2 GB per file.
-4. Publish. The asset is then permanently at:
-   `https://github.com/Hio-Mitos/hio-mitos.github.io/releases/download/<tag>/<filename>`
-5. Point the download button on the app page at that URL, and update the version, size
-   and SHA-256 shown beside it.
-
-Get the checksum with `Get-FileHash .\<file>.exe -Algorithm SHA256` and publish it — for a
-security app it is what lets someone confirm the download was not tampered with.
+Until Microsoft certifies a listing, the app page shows a short "being published" note in
+place of the Store button. Replace it with the real link once the listing is live.
 
 ## Comments
 
