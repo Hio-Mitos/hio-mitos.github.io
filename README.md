@@ -49,6 +49,10 @@ the only download route, and the app page links to it.
 Until Microsoft certifies a listing, the app page shows a short "being published" note
 in place of the Store button. Replace it with the real link once the listing is live.
 
+Live listings:
+
+- AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
+
 ## Dates on legal pages
 
 The privacy policy and licence each carry `Effective` and `Last updated` in their header.
