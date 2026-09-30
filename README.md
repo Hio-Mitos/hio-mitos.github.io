@@ -14,16 +14,18 @@ authbox/                One folder per app
   privacy.html            Privacy policy (the URL given to the Store)
   license.html            End User License Agreement
   support.html            Support page (the URL given to the Store)
+  changelog.html          Release history — every public release, newest first
 _template/              Copy this to start a new app
+_drafts/                Release entries written ahead of certification
 privacy_AuthBox.html    Redirect kept alive for the old policy URL
 ```
 
-`_template/` starts with an underscore, so GitHub Pages does not publish it.
+`_template/` and `_drafts/` start with an underscore, so GitHub Pages does not publish them.
 
 ## Adding a new app
 
 1. `cp -r _template <appname>` (lowercase, no spaces — it becomes the URL).
-2. Replace every `{{PLACEHOLDER}}` in the four files. Search for `{{` to find them all.
+2. Replace every `{{PLACEHOLDER}}` in the five files. Search for `{{` to find them all.
 3. Copy the AuthBox `<li class="app-item">` block in `index.html`, point it at the new
    folder and update the name, tagline, blurb and links.
 4. Commit and push. GitHub Pages rebuilds in about a minute.
@@ -52,6 +54,29 @@ in place of the Store button. Replace it with the real link once the listing is 
 Live listings:
 
 - AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
+
+## Release history
+
+Each app's `changelog.html` is the permanent record of its public releases. The Store's
+"What's new" field is overwritten on every submission; this page is not.
+
+When a release is submitted:
+
+1. Write its entry in `_drafts/<app>-v<version>.html`, using the same New / Improved /
+   Fixed headings as the Store notes, and the same wording.
+2. Hold back any page edits that describe the new version's features until it is live.
+
+When certification clears:
+
+1. Set the date it went live, and paste the entry at the top of `changelog.html`, under
+   the `NEW RELEASES GO HERE` comment.
+2. Update the `Latest:` line on the app page.
+3. Commit the entry together with the held page edits, then delete the draft.
+
+Rules: only versions that reached the Store get an entry — internal builds do not. A
+published entry is never edited; corrections go in a later release. Changes to the
+privacy policy or licence are noted under a "Documents" heading in the release they
+shipped with.
 
 ## Dates on legal pages
 

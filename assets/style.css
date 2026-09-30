@@ -273,6 +273,49 @@ ol.legal p { margin: 0; }
   font-size: 14px;
 }
 
+/* ---------- Release history ---------- */
+
+.release {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px 6px;
+  margin: 20px 0 0;
+  scroll-margin-top: 20px;
+}
+.release:target { border-color: var(--accent); }
+.release-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.release-head h2 { margin: 0; font-size: 20px; }
+.release-head h2 a { color: inherit; text-decoration: none; }
+.release-head h2 a:hover { color: var(--accent); }
+.release-head time { color: var(--muted); font-size: 14px; }
+.release .tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.release h3 {
+  margin: 16px 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.release ul { margin: 0 0 12px; padding-left: 20px; }
+.release li { margin: 3px 0; }
+.release p { margin: 8px 0 12px; }
+
+.latest { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+
 /* ---------- Breadcrumb / back link ---------- */
 
 .crumb { padding: 28px 0 0; font-size: 14px; }
