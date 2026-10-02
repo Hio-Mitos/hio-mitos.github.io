@@ -7,9 +7,10 @@ Live at <https://hio-mitos.github.io>.
 
 ```
 index.html              Homepage — one card per app
-assets/style.css        Shared stylesheet. Every page links to it.
-assets/theme.js         Light/dark toggle. Loaded in <head>, no defer.
-authbox/                One folder per app
+assets/home.css         Homepage design (its own look, not shared with any app)
+assets/theme.js         Light/dark toggle, shared by every page. Loaded in <head>, no defer.
+authbox/                One folder per app, each with its own design
+  style.css               This app's stylesheet — every page in the folder links to it
   index.html              App page: what it does, where to get it
   privacy.html            Privacy policy (the URL given to the Store)
   license.html            End User License Agreement
@@ -96,11 +97,26 @@ There is no comment system on the site; support goes through that mailbox.
 
 ## Styling and theme
 
-All visual changes belong in `assets/style.css`. Pages carry no CSS of their own, so one
-edit there restyles the whole site. The palette is defined once in `:root`, again under
-`prefers-color-scheme: dark`, and again under `:root[data-theme="dark"]` so a visitor's
-explicit choice beats their system setting.
+Every app has its own design, and the homepage has a third one:
+
+- `authbox/style.css` — AuthBox: green, rounded cards.
+- `clipboard-typer/style.css` — Clipboard Typer: blue banner header, Segoe UI.
+- `assets/home.css` — the homepage: warm paper, serif headings, and each app card in that
+  app's own accent colour.
+
+Pages carry no CSS of their own; an app's pages all link to the `style.css` in their
+folder, so one edit restyles that app and nothing else. A new app starts with
+`_template/style.css` (a copy of AuthBox's) — restyle it, and add the app's accent colours
+as an `.app-<slug>` rule in `assets/home.css` for its homepage card.
+
+Every stylesheet must keep three things so the shared toggle works: the palette defined on
+`:root`, again under `prefers-color-scheme: dark` guarded by `:not([data-theme="light"])`,
+and again under `:root[data-theme="dark"]`; plus the `.theme-toggle` rules.
 
 `assets/theme.js` draws the toggle button and remembers the choice in `localStorage`.
 It must stay in `<head>` without `defer`, or pages flash the wrong palette before the
 stored theme is applied.
+
+Use system fonts only. Web fonts would make every visit send the visitor's IP address to
+a third party, which sits badly with apps whose selling point is that nothing leaves the
+device.

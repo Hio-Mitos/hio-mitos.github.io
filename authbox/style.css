@@ -1,5 +1,6 @@
-/* hio-mitos.github.io — shared stylesheet for all app pages.
-   Change a value here and every page on the site follows. */
+/* AuthBox — stylesheet for every page in authbox/.
+   Each app on hio-mitos.github.io has its own design; this one is AuthBox's green look.
+   The homepage uses assets/home.css. Only assets/theme.js is shared. */
 
 :root {
   color-scheme: light dark;
@@ -155,28 +156,10 @@ code {
   overflow-wrap: anywhere;
 }
 
-/* ---------- App cards (homepage) ---------- */
-
-.apps { display: grid; gap: 16px; margin: 28px 0 0; padding: 0; list-style: none; }
-
-.app-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  transition: border-color .15s ease, transform .15s ease;
-}
-.app-item:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); transform: translateY(-1px); }
-
-.app-card { display: block; text-decoration: none; color: inherit; }
-.app-card .row { display: flex; align-items: center; gap: 14px; }
-.app-card h3 { margin: 0; font-size: 18px; }
-.app-card .tagline { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
-.app-card .blurb { margin: 14px 0 0; font-size: 15px; color: var(--text); }
-.app-card:hover h3 { color: var(--accent); }
+/* ---------- Pill links ---------- */
 
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
-.links a, .pill {
+.links a {
   display: inline-block;
   font-size: 13px;
   text-decoration: none;
@@ -189,29 +172,6 @@ code {
 .links a:hover { border-color: var(--accent); color: var(--accent); }
 .links a.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .links a.primary:hover { color: #fff; filter: brightness(1.06); }
-
-.status { font-size: 12px; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 3px 9px; }
-
-/* ---------- Notice (disclosure before the comment box) ---------- */
-
-.notice {
-  background: var(--warn-soft);
-  border: 1px solid var(--warn-border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin: 20px 0 28px;
-  font-size: 15px;
-}
-.notice h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-  color: var(--warn);
-  letter-spacing: 0.01em;
-}
-.notice p { margin: 0 0 10px; }
-.notice p:last-child { margin-bottom: 0; }
-.notice ul { margin: 0 0 10px; padding-left: 20px; }
-.notice li { margin: 3px 0; }
 
 /* ---------- Download ---------- */
 
@@ -259,19 +219,6 @@ code {
   word-break: break-all;
   line-height: 1.5;
   background: var(--surface-2);
-}
-
-/* ---------- Legal documents ---------- */
-
-ol.legal { margin: 28px 0 0; padding-left: 24px; }
-ol.legal > li { margin: 0 0 20px; padding-left: 4px; }
-ol.legal > li::marker { color: var(--muted); font-weight: 600; }
-ol.legal p { margin: 0; }
-
-.copyright {
-  margin: 36px 0 0;
-  color: var(--muted);
-  font-size: 14px;
 }
 
 /* ---------- Release history ---------- */

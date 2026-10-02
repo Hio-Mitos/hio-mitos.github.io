@@ -4,76 +4,139 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clipboard Typer — Support</title>
-<meta name="description" content="Help with Clipboard Typer: how to get in touch, and answers to the questions people ask most.">
-<link rel="stylesheet" href="../assets/style.css">
+<meta name="description" content="Help with Clipboard Typer: getting started, shortcuts, troubleshooting and how to contact us.">
+<link rel="stylesheet" href="style.css">
 <script src="../assets/theme.js"></script>
 </head>
 <body>
+<header class="banner">
+  <div class="wrap">
+    <nav class="crumb"><a href="../index.html">&larr; All apps</a><span class="sep">/</span><a href="index.html">Clipboard Typer</a></nav>
+    <div class="title">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
+          <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
+          <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Clipboard Typer — Support</h1>
+        <p class="sub">Help, troubleshooting and contact information</p>
+      </div>
+    </div>
+  </div>
+</header>
 <main>
-  <nav class="crumb"><a href="../index.html">&larr; All apps</a> &nbsp;/&nbsp; <a href="index.html">Clipboard Typer</a></nav>
-
-  <header>
-    <div class="badge" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
-        <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
-        <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <div>
-      <h1>Clipboard Typer — Support</h1>
-      <p class="sub">Last updated 2 October 2026</p>
-    </div>
-  </header>
 
   <div class="lede">
-    <p><strong>Email <a href="mailto:Hio-Mitos@gladiators.city">Hio-Mitos@gladiators.city</a></strong> and you'll get a reply, usually within a few days.</p>
-    <p>Please don't paste clipboard contents you wouldn't want someone else to read — they
-    are never needed to help you.</p>
+    <p><strong>Need help, found a bug, or have a suggestion?</strong></p>
+    <p><strong>Email <a href="mailto:Hio-Mitos@gladiators.city?subject=Clipboard%20Typer%20-%20support">Hio-Mitos@gladiators.city</a></strong></p>
+    <p>In version 1.4 and later you can also do it from the app: right-click the Clipboard
+    Typer icon in the notification area (system tray) and choose <strong>Send feedback /
+    report a bug</strong>. Your email app opens with the app version and Windows version
+    already filled in. We aim to reply within a few business days.</p>
   </div>
 
-  <h2>Before you write in</h2>
-  <p>It helps to include your Windows version, the Clipboard Typer version, what you did,
-  what you expected and what happened instead.</p>
+  <h2>Getting started</h2>
+  <p>After you start Clipboard Typer, it runs quietly in the notification area near the
+  clock. If you don't see it, click the <strong>^</strong> arrow to show hidden icons. Copy
+  text as usual, and Clipboard Typer remembers your last 50 text items.</p>
+  <table>
+    <thead><tr><th>Default shortcut</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></td><td>Opens your clipboard
+      history. Click an item or press <kbd>Enter</kbd> to type it; press <kbd>Ctrl</kbd> +
+      <kbd>Enter</kbd> to paste it normally instead.</td></tr>
+      <tr><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd></td><td>Instantly types the
+      most recently copied text.</td></tr>
+      <tr><td><kbd>Esc</kbd> (hold)</td><td>Stops typing partway through. You can switch
+      this off in the tray menu.</td></tr>
+    </tbody>
+  </table>
+  <p>Typing text, rather than pasting it, works where pasting is blocked or unavailable, for
+  example in some Remote Desktop sessions, virtual machines and login fields.</p>
 
-  <h2>Common questions</h2>
+  <h2>Frequently asked questions</h2>
 
-  <h3>My clipboard history disappeared.</h3>
-  <p>That's by design. The history is kept in memory only, so it's cleared whenever the app
-  closes or your PC restarts. Nothing is ever written to disk.</p>
+  <details>
+    <summary>How do I change the shortcuts?</summary>
+    <p>Right-click the tray icon, choose <strong>Customize shortcuts...</strong>, click
+    <strong>Change</strong>, then press your new combination. It must include at least one of
+    <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Shift</kbd> or <kbd>Win</kbd>. If another app
+    already uses that combination, Clipboard Typer tells you and lets you pick a different
+    one.</p>
+  </details>
 
-  <h3>A shortcut doesn't work.</h3>
-  <p>Another app may already be using that key combination. When you customise a shortcut
-  that's already taken, Clipboard Typer tells you so — choose a different one in its
-  settings.</p>
+  <details>
+    <summary>A shortcut does nothing, or I get a "shortcut already in use" message</summary>
+    <p>Another running app has claimed the same key combination. Close that app or change its
+    shortcut, or pick a different combination in <strong>Customize shortcuts...</strong>.</p>
+  </details>
 
-  <h3>The shortcuts don't respond in one particular app.</h3>
-  <p>Windows doesn't let an app send keystrokes into a window that is running as
-  Administrator unless it is running as Administrator too. If the shortcuts work
-  everywhere except one program, check whether that program was started as
-  Administrator.</p>
+  <details>
+    <summary>Nothing gets typed into an app that runs as administrator</summary>
+    <p>Windows blocks normal apps from sending keystrokes to apps running as administrator.
+    Choose <strong>Restart as Administrator</strong> from the tray menu, then try again. For
+    security reasons, Windows never allows any app to type into the User Account Control
+    (UAC) consent prompt itself.</p>
+  </details>
 
-  <h3>It doesn't start after I restart my PC.</h3>
-  <p>Make sure <strong>Run at startup</strong> is on in Clipboard Typer, and that it isn't
-  switched off in Windows Settings → Apps → Startup. If Windows has it turned off, the app
-  tells you and offers a direct way to fix it. Version 1.3.0 also fixed a bug that stopped
-  run at startup from working reliably, so make sure you're up to date.</p>
+  <details>
+    <summary>Characters go missing when typing into a remote session</summary>
+    <p>Very long texts over slow connections can occasionally drop characters. Try typing
+    shorter pieces. Characters that your keyboard layout can't produce, such as many emoji,
+    can't be typed into Remote Desktop sessions at all. Use <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
+    to paste them instead.</p>
+  </details>
 
-  <h3>How do I stop it while it's typing?</h3>
-  <p>Press and hold <strong>Esc</strong> to cancel typing partway through.</p>
+  <details>
+    <summary>"Run at startup" won't turn on, or says "blocked in Windows Settings"</summary>
+    <p>If startup was switched off in Task Manager or Windows Settings, Windows only lets you
+    switch it back on there. Clipboard Typer offers to open the right page for you, or go to
+    <strong>Settings &gt; Apps &gt; Startup</strong> and switch Clipboard Typer on. If it says
+    "blocked by policy", your organization manages this setting. Contact your IT
+    administrator.</p>
+  </details>
 
-  <h3>Why type instead of paste?</h3>
-  <p>Some places refuse a paste — remote sessions, certain login fields and consoles.
-  Typing the text out as keystrokes works there too.</p>
+  <details>
+    <summary>Is my clipboard history saved or sent anywhere?</summary>
+    <p>No. It stays in memory on your PC only, and is erased when you quit the app or choose
+    <strong>Clear history</strong>. The app makes no network connections. See the
+    <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </details>
+
+  <details>
+    <summary>How do I uninstall Clipboard Typer?</summary>
+    <p>Right-click the tray icon and choose <strong>Quit</strong>. Then go to <strong>Settings
+    &gt; Apps &gt; Installed apps</strong>, find Clipboard Typer, and choose
+    <strong>Uninstall</strong>.</p>
+  </details>
+
+  <h2>System requirements</h2>
+  <p>Windows 10 version 1809 or later, or Windows 11, on a desktop PC or laptop.</p>
+
+  <h2>Reporting a bug</h2>
+  <p>To help us fix a problem quickly, please include:</p>
+  <ul>
+    <li>what you were doing when it happened, and what you expected to happen;</li>
+    <li>the app you were typing into, if relevant;</li>
+    <li>the full text of any error message, or a screenshot of it.</li>
+  </ul>
+  <p>Please <strong>don't</strong> send us passwords or other sensitive text from your
+  clipboard.</p>
 
   <h2>Reporting a security issue</h2>
   <p>If you believe you've found a vulnerability, email <a href="mailto:Hio-Mitos@gladiators.city">Hio-Mitos@gladiators.city</a> with the details and please
   hold off on publishing until it's fixed.</p>
 
+  <p class="copyright">&copy; 2026 Hio Mitos. All rights reserved.</p>
+
   <footer>
     <a href="../index.html">All apps</a> ·
     <a href="index.html">Clipboard Typer</a> ·
-    <a href="privacy.html">Privacy</a>
+    <a href="privacy.html">Privacy</a> ·
+    <a href="changelog.html">Release history</a>
   </footer>
 </main>
 </body>

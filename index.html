@@ -5,56 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hio Mitos — Apps</title>
 <meta name="description" content="Apps by Hio Mitos, published on the Microsoft Store. Privacy policies, support pages and links for each app.">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/home.css">
 <script src="assets/theme.js"></script>
 </head>
 <body>
-<main class="wide">
+<main>
 
-  <header>
-    <div class="badge lg" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="3.5" y="3.5" width="7" height="7" rx="1.6" fill="#fff"/>
-        <rect x="13.5" y="3.5" width="7" height="7" rx="1.6" fill="#fff" opacity="0.72"/>
-        <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" fill="#fff" opacity="0.72"/>
-        <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" fill="#fff" opacity="0.45"/>
+  <header class="masthead">
+    <p class="kicker">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3.5" y="3.5" width="7" height="7" rx="1.6" fill="currentColor"/>
+        <rect x="13.5" y="3.5" width="7" height="7" rx="1.6" fill="currentColor" opacity=".6"/>
+        <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" fill="currentColor" opacity=".6"/>
+        <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" fill="currentColor" opacity=".3"/>
       </svg>
-    </div>
-    <div>
-      <h1>Hio Mitos</h1>
-      <p class="sub">Small, private, offline-first apps for Windows</p>
-    </div>
+      Apps for Windows
+    </p>
+    <h1>Hio Mitos</h1>
+    <p class="intro">Small, private, offline-first apps, published on the Microsoft Store.
+    Each one has its own page with a privacy policy, support and its release history.</p>
   </header>
 
-  <div class="lede">
-    <p>This is the home for documentation and links for every app I publish on the
-    Microsoft Store. Each app has its own page with a privacy policy and a support
-    contact.</p>
-  </div>
-
-  <h2>Apps</h2>
+  <p class="section-label">Apps</p>
 
   <ul class="apps">
 
-    <li class="app-item">
-      <a class="app-card" href="authbox/index.html">
-        <div class="row">
-          <div class="badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="#fff"/>
-              <path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3>AuthBox</h3>
-            <p class="tagline">Offline two-factor authenticator</p>
-          </div>
+    <li class="app app-authbox">
+      <a class="app-head" href="authbox/index.html">
+        <div class="tile" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="#fff"/>
+            <path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/>
+          </svg>
         </div>
-        <p class="blurb">Two-factor codes and account recovery details in one encrypted
-        vault on your own machine. No account, no server, no telemetry.</p>
+        <div>
+          <h2>AuthBox</h2>
+          <p class="tagline">Offline two-factor authenticator</p>
+        </div>
       </a>
-      <div class="links">
-        <a class="primary" href="https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR">Microsoft Store</a>
+      <p class="blurb">Two-factor codes and account recovery details in one encrypted vault on
+      your own machine. No account, no server, no telemetry.</p>
+      <div class="app-links">
+        <a class="store" href="https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR">Microsoft Store</a>
         <a href="authbox/privacy.html">Privacy</a>
         <a href="authbox/license.html">Licence</a>
         <a href="authbox/support.html">Support</a>
@@ -62,33 +54,32 @@
       </div>
     </li>
 
-    <li class="app-item">
-      <a class="app-card" href="clipboard-typer/index.html">
-        <div class="row">
-          <div class="badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
-              <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
-              <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Clipboard Typer</h3>
-            <p class="tagline">Clipboard history you can type or paste</p>
-          </div>
+    <li class="app app-clipboard-typer">
+      <a class="app-head" href="clipboard-typer/index.html">
+        <div class="tile" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
+            <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
+            <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <p class="blurb">Your last 50 copied text items, ready to retype or paste with a
-        shortcut. Kept in memory only, never written to disk, never sent anywhere.</p>
+        <div>
+          <h2>Clipboard Typer</h2>
+          <p class="tagline">Clipboard history you can type or paste</p>
+        </div>
       </a>
-      <div class="links">
-        <a class="primary" href="https://apps.microsoft.com/store/detail/9PN8744TNJ8V">Microsoft Store</a>
+      <p class="blurb">Your last 50 copied text items, ready to retype or paste with a
+      shortcut. Kept in memory only, never written to disk, never sent anywhere.</p>
+      <div class="app-links">
+        <a class="store" href="https://apps.microsoft.com/store/detail/9PN8744TNJ8V">Microsoft Store</a>
         <a href="clipboard-typer/privacy.html">Privacy</a>
         <a href="clipboard-typer/support.html">Support</a>
+        <a href="clipboard-typer/changelog.html">History</a>
       </div>
     </li>
 
-    <!-- To add an app: copy the block above, or copy the _template folder.
-         See README.md for the three steps. -->
+    <!-- To add an app: copy one of the app blocks above, give it its own
+         app-<slug> class, and add that class's accent colours to assets/home.css. -->
 
   </ul>
 
