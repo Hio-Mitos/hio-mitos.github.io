@@ -201,6 +201,7 @@ details > p { margin: 8px 0 2px; }
 .release h3 { margin: 14px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 .release p { margin: 8px 0 10px; }
 .release ul { margin: 0 0 12px; padding-left: 20px; }
+.release-head + ul { margin-top: 10px; }
 
 /* ---------- Footer ---------- */
 
