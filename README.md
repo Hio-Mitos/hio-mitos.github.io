@@ -54,6 +54,7 @@ in place of the Store button. Replace it with the real link once the listing is 
 Live listings:
 
 - AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
+- Clipboard Typer — <https://apps.microsoft.com/store/detail/9PN8744TNJ8V>
 
 ## Release history
 
