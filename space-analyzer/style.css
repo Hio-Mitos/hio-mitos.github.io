@@ -1,0 +1,226 @@
+/* Space Analyzer — stylesheet for every page in space-analyzer/.
+   Amber on charcoal, with a treemap mosaic in the header: the shape disk analyzers use
+   to show what fills a drive. Each app on hio-mitos.github.io has its own look; only
+   assets/theme.js (the light/dark toggle) is shared. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --text: #23201C;
+  --muted: #6E675E;
+  --line: #E7E1D8;
+  --accent: #B35C00;          /* links, buttons — readable on white */
+  --accent-hover: #8F4900;
+  --amber: #F59E0B;           /* decoration only */
+  --band: #1E1C1A;            /* header stays charcoal in both themes */
+  --band-text: #F5F1EA;
+  --band-muted: #B9B1A5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151412; --surface: #1E1C19; --text: #EEE9E1; --muted: #A69E92; --line: #2F2B26;
+    --accent: #F5A524; --accent-hover: #FFC261; --band: #0E0D0C;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151412; --surface: #1E1C19; --text: #EEE9E1; --muted: #A69E92; --line: #2F2B26;
+  --accent: #F5A524; --accent-hover: #FFC261; --band: #0E0D0C;
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header band ---------- */
+
+.band {
+  background: var(--band);
+  color: var(--band-text);
+  padding: 22px 20px 34px;
+  border-bottom: 4px solid var(--amber);
+  overflow: hidden;
+}
+.band .wrap { position: relative; max-width: 780px; margin: 0 auto; }
+
+.crumb { position: relative; z-index: 1; font-size: 14px; margin: 0 0 24px; }
+.crumb a { color: var(--band-muted); text-decoration: none; }
+.crumb a:hover { color: var(--amber); }
+.crumb .sep { color: var(--band-muted); opacity: .6; margin: 0 6px; }
+
+.title { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; max-width: 74%; }
+.badge {
+  width: 52px; height: 52px; flex: none;
+  border-radius: 6px;
+  background: linear-gradient(150deg, #F7B23B, #D97706);
+  display: grid; place-items: center;
+}
+.badge svg { width: 28px; height: 28px; }
+.badge.lg { width: 64px; height: 64px; }
+.badge.lg svg { width: 34px; height: 34px; }
+.band h1 { margin: 0; font-size: 30px; font-weight: 650; line-height: 1.2; letter-spacing: -0.01em; }
+.band .sub { margin: 4px 0 0; color: var(--band-muted); font-size: 15px; }
+
+/* Treemap mosaic — decoration, top right of the header */
+.mosaic {
+  position: absolute; right: 0; top: 4px;
+  width: 210px; height: 118px;
+  display: grid; gap: 3px;
+  grid-template-columns: 5fr 3fr 2fr;
+  grid-template-rows: 3fr 2fr 2fr;
+  grid-template-areas: "a b c" "a d d" "e f f";
+  opacity: .9;
+}
+.mosaic span { border-radius: 2px; }
+.mosaic span:nth-child(1) { grid-area: a; background: #F59E0B; }
+.mosaic span:nth-child(2) { grid-area: b; background: #D97706; }
+.mosaic span:nth-child(3) { grid-area: c; background: #FBBF24; opacity: .7; }
+.mosaic span:nth-child(4) { grid-area: d; background: #B45309; }
+.mosaic span:nth-child(5) { grid-area: e; background: #FCD34D; opacity: .55; }
+.mosaic span:nth-child(6) { grid-area: f; background: #92400E; }
+
+/* ---------- Content ---------- */
+
+main { max-width: 780px; margin: 0 auto; padding: 32px 20px 64px; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+strong { font-weight: 650; }
+
+h2 {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 20px; margin: 40px 0 10px; letter-spacing: -0.01em;
+}
+h2::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--amber); flex: none; }
+h3 { font-size: 16px; margin: 24px 0 4px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+
+.lede {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--amber);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin: 0 0 8px;
+}
+.lede p { margin: 0; }
+.lede p + p { margin-top: 10px; }
+
+code {
+  font: .9em ui-monospace, "Cascadia Code", Consolas, monospace;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: .1em .4em; border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Links, store button ---------- */
+
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+.links a {
+  font-size: 14px; text-decoration: none;
+  padding: 5px 12px; border-radius: 3px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); }
+.links a.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+:root[data-theme="dark"] .links a.primary { color: #1E1C1A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .links a.primary { color: #1E1C1A; } }
+
+.download {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin: 12px 0 8px;
+}
+.dl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 650;
+  padding: 10px 18px; border-radius: 3px;
+  background: var(--accent); color: #fff;
+}
+.btn:hover { background: var(--accent-hover); color: #fff; }
+:root[data-theme="dark"] .btn, :root[data-theme="dark"] .btn:hover { color: #1E1C1A; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .btn, :root:not([data-theme="light"]) .btn:hover { color: #1E1C1A; }
+}
+.meta { color: var(--muted); font-size: 14px; }
+.latest { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+
+/* ---------- Release history ---------- */
+
+.release {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px 20px 6px;
+  margin: 18px 0 0;
+  scroll-margin-top: 20px;
+}
+.release:target { border-color: var(--accent); }
+.release-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 8px; }
+.release-head h2 { margin: 0; font-size: 22px; }
+.release-head h2::before { display: none; }
+.release-head h2 a { color: inherit; text-decoration: none; }
+.release-head h2 a:hover { color: var(--accent); }
+.release-head time { color: var(--muted); font-size: 14px; }
+.release h3 {
+  margin: 16px 0 4px; font-size: 12px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+}
+.release ul { margin: 0 0 10px; }
+
+/* ---------- Footer ---------- */
+
+.copyright { color: var(--muted); font-size: 13px; margin: 32px 0 0; }
+footer {
+  margin-top: 44px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 14px;
+}
+footer a { color: var(--muted); }
+footer a:hover { color: var(--accent); }
+footer p { margin: 10px 0 0; }
+
+/* ---------- Theme toggle (drawn by assets/theme.js) ---------- */
+
+.theme-toggle {
+  position: fixed; top: 14px; right: 14px; z-index: 50;
+  width: 38px; height: 38px; padding: 0;
+  display: grid; place-items: center;
+  border-radius: 4px;
+  border: 1px solid #4A443D;
+  background: #2A2724;
+  color: #F5F1EA;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--amber); color: var(--amber); }
+.theme-toggle:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: block; }
+}
+
+@media (max-width: 640px) {
+  .mosaic { display: none; }
+  .title { max-width: 100%; }
+}
+@media (max-width: 520px) {
+  .band { padding: 18px 16px 26px; }
+  .band h1 { font-size: 24px; }
+  main { padding: 24px 16px 48px; }
+  .theme-toggle { top: 10px; right: 10px; width: 34px; height: 34px; }
+}

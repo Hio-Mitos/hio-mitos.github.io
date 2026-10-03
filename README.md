@@ -56,6 +56,7 @@ Live listings:
 
 - AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
 - Clipboard Typer — <https://apps.microsoft.com/store/detail/9PN8744TNJ8V>
+- Space Analyzer (listed as "Disk-Space-Analyzer") — <https://apps.microsoft.com/store/detail/9N1S53NNNBLW>
 
 ## Release history
 
@@ -101,6 +102,7 @@ Every app has its own design, and the homepage has a third one:
 
 - `authbox/style.css` — AuthBox: green, rounded cards.
 - `clipboard-typer/style.css` — Clipboard Typer: blue banner header, Segoe UI.
+- `space-analyzer/style.css` — Space Analyzer: amber on charcoal, treemap mosaic header.
 - `assets/home.css` — the homepage: warm paper, serif headings, and each app card in that
   app's own accent colour.
 

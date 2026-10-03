@@ -28,12 +28,15 @@
 /* Per-app accents, light then dark */
 .app-authbox        { --app: #0f9d77; --app-deep: #0b7a5c; }
 .app-clipboard-typer{ --app: #2F6FED; --app-deep: #1D4FCF; }
+.app-space-analyzer { --app: #D97706; --app-deep: #B45309; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .app-authbox         { --app: #2dd4a7; }
   :root:not([data-theme="light"]) .app-clipboard-typer { --app: #79A6FF; }
+  :root:not([data-theme="light"]) .app-space-analyzer  { --app: #F5A524; }
 }
 :root[data-theme="dark"] .app-authbox         { --app: #2dd4a7; }
 :root[data-theme="dark"] .app-clipboard-typer { --app: #79A6FF; }
+:root[data-theme="dark"] .app-space-analyzer  { --app: #F5A524; }
 
 * { box-sizing: border-box; }
 body {
