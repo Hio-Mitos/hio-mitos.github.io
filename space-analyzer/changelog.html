@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space Analyzer — Release history</title>
+<meta name="description" content="Every public release of Space Analyzer recorded on this site, with what changed in each.">
+<link rel="stylesheet" href="style.css">
+<script src="../assets/theme.js"></script>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div class="mosaic" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <nav class="crumb"><a href="../index.html">&larr; All apps</a><span class="sep">/</span><a href="index.html">Space Analyzer</a></nav>
+    <div class="title">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="10" height="18" rx="1.5" fill="#fff"/>
+          <rect x="14.5" y="3" width="6.5" height="9" rx="1.5" fill="#fff" opacity=".8"/>
+          <rect x="14.5" y="13.5" width="6.5" height="3.5" rx="1" fill="#fff" opacity=".6"/>
+          <rect x="14.5" y="18.5" width="6.5" height="2.5" rx="1" fill="#fff" opacity=".45"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Space Analyzer — Release history</h1>
+        <p class="sub">Public releases, newest first</p>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+
+  <div class="lede">
+    <p>Each entry is the release as it was published on the Microsoft Store, dated the day it
+    went live. Entries are never rewritten afterwards; if an earlier note turns out to be wrong,
+    the correction appears in a later release.</p>
+    <p>Releases before 2.2.1 are not recorded here.</p>
+  </div>
+
+  <!-- NEW RELEASES GO HERE, above the previous one. Set the date it went live,
+       and never edit a published entry afterwards. -->
+
+  <section class="release" id="v2.2.1">
+    <div class="release-head">
+      <h2><a href="#v2.2.1">2.2.1</a></h2>
+      <time datetime="2026-09-08">8 September 2026</time>
+    </div>
+    <p>Version 2.2.1 is a major update packed with new tools, big performance gains, and a more
+    polished interface since 1.1.2.</p>
+    <h3>New tools</h3>
+    <ul>
+      <li>Largest Files view, File Age chart (click a bucket to reveal those files in Explorer)</li>
+      <li>Verified duplicate finder (SHA256), snapshot compare for tracking growth over time</li>
+      <li>HTML export, CSV export and re-import</li>
+    </ul>
+    <h3>Faster scanning</h3>
+    <ul>
+      <li>Scan speed dramatically improved on large drives (fixed a bug that could leave scans running effectively single-threaded)</li>
+      <li>Parallel multi-drive scanning, pre-scan include/exclude filters</li>
+      <li>Long file path and Alternate Data Stream support, drag a folder in to scan it</li>
+      <li>Hard-link-aware size-on-disk reporting</li>
+    </ul>
+    <h3>Bulk actions</h3>
+    <ul>
+      <li>Select files by filter, then delete or move in bulk</li>
+      <li>Bulk find-and-replace renaming</li>
+    </ul>
+    <h3>Better visuals</h3>
+    <ul>
+      <li>Customizable category colors (presets + hue shift) across every chart</li>
+      <li>Live category coloring in the file list</li>
+      <li>Windows taskbar progress indicator and on-screen scan timer</li>
+    </ul>
+    <h3>Interface</h3>
+    <ul>
+      <li>Resizable, scrollable Settings that adapts to any window size</li>
+      <li>Double-click to open files, F2 to rename, Delete to Recycle Bin, copy/cut</li>
+      <li>Right-click "Open Command Prompt here" / Properties, advanced search filters</li>
+      <li>Drag files out to Explorer, export the treemap as an image</li>
+    </ul>
+    <h3>Fixes</h3>
+    <ul>
+      <li>Crash when cancelling a scan</li>
+      <li>Stale Explorer right-click entry after an update</li>
+      <li>Progress indicator appearing frozen when the window loses focus mid-scan</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="../index.html">All apps</a> ·
+    <a href="index.html">Space Analyzer</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="support.html">Support</a>
+  </footer>
+</main>
+</body>
+</html>
