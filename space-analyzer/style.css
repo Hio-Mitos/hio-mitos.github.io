@@ -12,7 +12,7 @@
   --line: #E7E1D8;
   --accent: #B35C00;          /* links, buttons — readable on white */
   --accent-hover: #8F4900;
-  --amber: #F59E0B;           /* decoration only */
+  --amber: #FFAB00;           /* decoration only — the logo's amber */
   --band: #1E1C1A;            /* header stays charcoal in both themes */
   --band-text: #F5F1EA;
   --band-muted: #B9B1A5;
@@ -63,6 +63,8 @@ body {
   display: grid; place-items: center;
 }
 .badge svg { width: 28px; height: 28px; }
+.badge.logo { background: none; }
+.badge.logo img { width: 100%; height: 100%; display: block; }
 .badge.lg { width: 64px; height: 64px; }
 .badge.lg svg { width: 34px; height: 34px; }
 .band h1 { margin: 0; font-size: 30px; font-weight: 650; line-height: 1.2; letter-spacing: -0.01em; }
@@ -79,12 +81,12 @@ body {
   opacity: .9;
 }
 .mosaic span { border-radius: 2px; }
-.mosaic span:nth-child(1) { grid-area: a; background: #F59E0B; }
-.mosaic span:nth-child(2) { grid-area: b; background: #D97706; }
-.mosaic span:nth-child(3) { grid-area: c; background: #FBBF24; opacity: .7; }
-.mosaic span:nth-child(4) { grid-area: d; background: #B45309; }
-.mosaic span:nth-child(5) { grid-area: e; background: #FCD34D; opacity: .55; }
-.mosaic span:nth-child(6) { grid-area: f; background: #92400E; }
+.mosaic span:nth-child(1) { grid-area: a; background: #4C9AFF; }
+.mosaic span:nth-child(2) { grid-area: b; background: #36B37E; }
+.mosaic span:nth-child(3) { grid-area: c; background: #FFAB00; }
+.mosaic span:nth-child(4) { grid-area: d; background: #FFAB00; opacity: .8; }
+.mosaic span:nth-child(5) { grid-area: e; background: #36B37E; opacity: .7; }
+.mosaic span:nth-child(6) { grid-area: f; background: #2F3C8C; }
 
 /* ---------- Content ---------- */
 
