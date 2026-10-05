@@ -56,7 +56,7 @@ Live listings:
 
 - AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
 - Clipboard Typer — <https://apps.microsoft.com/store/detail/9PN8744TNJ8V>
-- Space Analyzer (listed as "Disk-Space-Analyzer") — <https://apps.microsoft.com/store/detail/9N1S53NNNBLW>
+- Space Analyzer (formerly "Disk-Space-Analyzer") — <https://apps.microsoft.com/store/detail/9N1S53NNNBLW>
 
 ## Release history
 

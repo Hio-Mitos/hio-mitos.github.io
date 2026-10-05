@@ -37,6 +37,44 @@
   <!-- NEW RELEASES GO HERE, above the previous one. Set the date it went live,
        and never edit a published entry afterwards. -->
 
+  <section class="release" id="v2.3.10.1">
+    <div class="release-head">
+      <h2><a href="#v2.3.10.1">2.3.10.1</a></h2>
+      <time datetime="2026-10-03">3 October 2026</time>
+    </div>
+    <p>Space Analyzer is the new name for Disk-Space-Analyzer - same app, now with a proper icon
+    and a lot more under the hood.</p>
+    <h3>Renamed and redesigned</h3>
+    <ul>
+      <li>New name and a new app icon, drawn fresh for every size from 16px to 256px</li>
+      <li>Folders in the Treemap are now outlined, so you can see where one ends and the next begins</li>
+      <li>Charts colour folders by what is actually inside them, not one flat colour</li>
+    </ul>
+    <h3>Much faster scanning</h3>
+    <ul>
+      <li>Large drives scan dramatically faster: folders are shared across up to 16 worker threads wherever the data sits, instead of one thread doing most of the work</li>
+      <li>Folder scans and tidy drives are no longer stuck on a single thread</li>
+      <li>Fast NTFS scan now tells you why it fell back, so you know whether running as administrator would help</li>
+    </ul>
+    <h3>More control</h3>
+    <ul>
+      <li>Delete permanently, alongside delete to Recycle Bin</li>
+      <li>Hide the File Types, Largest Files or File Age tabs if you do not use them</li>
+      <li>Change something in File Explorer and a Sync changes button appears, rescanning only the folders that changed</li>
+    </ul>
+    <h3>Smoother to use</h3>
+    <ul>
+      <li>Moving back up to a parent folder is no longer slow on large scans</li>
+      <li>Resizing the window, and hovering over the charts, are far smoother</li>
+      <li>The window, taskbar and Start menu now show a real app icon</li>
+    </ul>
+    <h3>Fixes</h3>
+    <ul>
+      <li>Switching between the Sunburst, File Types, Largest Files and File Age tabs</li>
+      <li>The app no longer appears to freeze when a large scan finishes</li>
+    </ul>
+  </section>
+
   <section class="release" id="v2.2.1">
     <div class="release-head">
       <h2><a href="#v2.2.1">2.2.1</a></h2>
