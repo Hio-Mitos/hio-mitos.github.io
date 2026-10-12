@@ -1,4 +1,4 @@
-/* hio-mitos.github.io — homepage only.
+/* hio-mitos.github.io — portfolio homepage only.
    Deliberately its own look: warm paper, ink, serif headings. Each app card picks up
    that app's own accent colour so the list previews where each link leads.
    System fonts only — no web fonts, so the homepage makes no third-party requests. */
@@ -119,6 +119,64 @@ a { color: inherit; }
   border: 0; border-radius: 4px; padding: 3px 12px; font-weight: 600;
 }
 .app-links a.store:hover { color: #fff; filter: brightness(1.12); }
+
+/* ---------- Portfolio: page nav ---------- */
+
+.page-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 26px 0 0; font-size: 15px; }
+.page-nav a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+.page-nav a:hover { border-color: var(--ink); }
+
+section[id] { scroll-margin-top: 24px; }
+.section-title {
+  margin: 56px 0 6px;
+  font-family: var(--serif);
+  font-size: 30px; font-weight: 600; letter-spacing: -0.01em;
+}
+.section-intro { margin: 0 0 18px; color: var(--muted); }
+.group-label {
+  margin: 30px 0 12px;
+  font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Portfolio: status chip and latest line ---------- */
+
+.app-title-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.status {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted);
+}
+.status.live { border-color: color-mix(in srgb, var(--app, var(--ink)) 45%, var(--line)); color: var(--app, var(--ink)); }
+.status.wip { border-style: dashed; }
+.app .latest { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.app .latest a { color: var(--text); }
+
+/* Projects without their own colour (websites, experiments) */
+.app-neutral { --app: #6B675F; --app-deep: #3F3C37; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .app-neutral { --app: #A39E95; }
+}
+:root[data-theme="dark"] .app-neutral { --app: #A39E95; }
+
+/* ---------- Portfolio: timeline ---------- */
+
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 0 0 22px 22px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -7px; top: 7px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--app, var(--ink)); border: 2px solid var(--bg);
+}
+.timeline time { display: block; font-size: 13px; color: var(--muted); letter-spacing: .02em; }
+.timeline .what { font-family: var(--serif); font-size: 19px; font-weight: 600; }
+.timeline .what a { text-decoration: none; }
+.timeline .what a:hover { color: var(--app); }
+.timeline p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+
+/* ---------- Portfolio: about ---------- */
+
+.about p { max-width: 38em; font-size: 17px; }
 
 /* ---------- Footer ---------- */
 

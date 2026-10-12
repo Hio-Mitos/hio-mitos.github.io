@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hio Mitos — Apps</title>
-<meta name="description" content="Apps by Hio Mitos, published on the Microsoft Store. Privacy policies, support pages and links for each app.">
+<title>Hio Mitos — Portfolio</title>
+<meta name="description" content="The portfolio of Hio Mitos: private, offline-first Windows apps, websites and tools — everything published, and what's in progress.">
 <link rel="stylesheet" href="assets/home.css">
 <script src="assets/theme.js"></script>
 </head>
@@ -19,95 +19,195 @@
         <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" fill="currentColor" opacity=".6"/>
         <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" fill="currentColor" opacity=".3"/>
       </svg>
-      Apps for Windows
+      Portfolio
     </p>
     <h1>Hio Mitos</h1>
-    <p class="intro">Small, private, offline-first apps, published on the Microsoft Store.
-    Each one has its own page with a privacy policy, support and its release history.</p>
+    <p class="intro">I design and build software under the Hio Mitos name — small, private,
+    offline-first apps for Windows, and the websites and tools around them. This is everything
+    I've published, and what I'm working on next.</p>
+    <nav class="page-nav" aria-label="On this page">
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <p class="section-label">Apps</p>
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-intro">Each one has its own page with documentation, a privacy policy and
+    a release history.</p>
 
-  <ul class="apps">
+    <p class="group-label">Windows apps · Microsoft Store</p>
+    <ul class="apps">
 
-    <li class="app app-authbox">
-      <a class="app-head" href="authbox/index.html">
-        <div class="tile" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="#fff"/>
-            <path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/>
-          </svg>
+      <li class="app app-authbox">
+        <a class="app-head" href="authbox/index.html">
+          <div class="tile" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="#fff"/>
+              <path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-title-row"><h2>AuthBox</h2><span class="status live">Published</span></div>
+            <p class="tagline">Offline two-factor authenticator</p>
+          </div>
+        </a>
+        <p class="blurb">Two-factor codes and account recovery details in one encrypted vault on
+        your own machine. No account, no server, no telemetry.</p>
+        <p class="latest">Latest: <a href="authbox/changelog.html#v1.1.1">1.1.1</a>, 30 September 2026</p>
+        <div class="app-links">
+          <a class="store" href="https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR">Microsoft Store</a>
+          <a href="authbox/privacy.html">Privacy</a>
+          <a href="authbox/license.html">Licence</a>
+          <a href="authbox/support.html">Support</a>
+          <a href="authbox/changelog.html">History</a>
         </div>
-        <div>
-          <h2>AuthBox</h2>
-          <p class="tagline">Offline two-factor authenticator</p>
-        </div>
-      </a>
-      <p class="blurb">Two-factor codes and account recovery details in one encrypted vault on
-      your own machine. No account, no server, no telemetry.</p>
-      <div class="app-links">
-        <a class="store" href="https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR">Microsoft Store</a>
-        <a href="authbox/privacy.html">Privacy</a>
-        <a href="authbox/license.html">Licence</a>
-        <a href="authbox/support.html">Support</a>
-        <a href="authbox/changelog.html">History</a>
-      </div>
-    </li>
+      </li>
 
-    <li class="app app-clipboard-typer">
-      <a class="app-head" href="clipboard-typer/index.html">
-        <div class="tile" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
-            <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
-            <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+      <li class="app app-clipboard-typer">
+        <a class="app-head" href="clipboard-typer/index.html">
+          <div class="tile" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="4.5" width="14" height="16.5" rx="2.2" fill="#fff"/>
+              <rect x="8.5" y="2.6" width="7" height="3.8" rx="1.3" fill="#fff" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/>
+              <path d="M8.5 11h7M8.5 14h7M8.5 17h4.5" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-title-row"><h2>Clipboard Typer</h2><span class="status live">Published</span></div>
+            <p class="tagline">Clipboard history you can type or paste</p>
+          </div>
+        </a>
+        <p class="blurb">Your last 50 copied text items, ready to retype or paste with a
+        shortcut. Kept in memory only, never written to disk, never sent anywhere.</p>
+        <p class="latest">Latest: <a href="clipboard-typer/changelog.html#v1.3.2">1.3.2</a>, 2 October 2026</p>
+        <div class="app-links">
+          <a class="store" href="https://apps.microsoft.com/store/detail/9PN8744TNJ8V">Microsoft Store</a>
+          <a href="clipboard-typer/privacy.html">Privacy</a>
+          <a href="clipboard-typer/license.html">Licence</a>
+          <a href="clipboard-typer/support.html">Support</a>
+          <a href="clipboard-typer/changelog.html">History</a>
         </div>
-        <div>
-          <h2>Clipboard Typer</h2>
-          <p class="tagline">Clipboard history you can type or paste</p>
-        </div>
-      </a>
-      <p class="blurb">Your last 50 copied text items, ready to retype or paste with a
-      shortcut. Kept in memory only, never written to disk, never sent anywhere.</p>
-      <div class="app-links">
-        <a class="store" href="https://apps.microsoft.com/store/detail/9PN8744TNJ8V">Microsoft Store</a>
-        <a href="clipboard-typer/privacy.html">Privacy</a>
-        <a href="clipboard-typer/license.html">Licence</a>
-        <a href="clipboard-typer/support.html">Support</a>
-        <a href="clipboard-typer/changelog.html">History</a>
-      </div>
-    </li>
+      </li>
 
-    <li class="app app-space-analyzer">
-      <a class="app-head" href="space-analyzer/index.html">
-        <div class="tile logo" aria-hidden="true">
-          <img src="space-analyzer/logo.png" alt="" width="52" height="52">
+      <li class="app app-space-analyzer">
+        <a class="app-head" href="space-analyzer/index.html">
+          <div class="tile logo" aria-hidden="true">
+            <img src="space-analyzer/logo.png" alt="" width="52" height="52">
+          </div>
+          <div>
+            <div class="app-title-row"><h2>Space Analyzer</h2><span class="status live">Published</span></div>
+            <p class="tagline">See what's using your storage space</p>
+          </div>
+        </a>
+        <p class="blurb">Treemaps, charts and file lists that show exactly what fills your drives,
+        with duplicate finding and bulk clean-up. Everything is processed on your own PC.</p>
+        <p class="latest">Latest: <a href="space-analyzer/changelog.html#v2.3.10.1">2.3.10.1</a>, 3 October 2026</p>
+        <div class="app-links">
+          <a class="store" href="https://apps.microsoft.com/store/detail/9N1S53NNNBLW">Microsoft Store</a>
+          <a href="space-analyzer/privacy.html">Privacy</a>
+          <a href="space-analyzer/license.html">Licence</a>
+          <a href="space-analyzer/support.html">Support</a>
+          <a href="space-analyzer/changelog.html">History</a>
         </div>
-        <div>
-          <h2>Space Analyzer</h2>
-          <p class="tagline">See what's using your storage space</p>
-        </div>
-      </a>
-      <p class="blurb">Treemaps, charts and file lists that show exactly what fills your drives,
-      with duplicate finding and bulk clean-up. Everything is processed on your own PC.</p>
-      <div class="app-links">
-        <a class="store" href="https://apps.microsoft.com/store/detail/9N1S53NNNBLW">Microsoft Store</a>
-        <a href="space-analyzer/privacy.html">Privacy</a>
-        <a href="space-analyzer/license.html">Licence</a>
-        <a href="space-analyzer/support.html">Support</a>
-        <a href="space-analyzer/changelog.html">History</a>
-      </div>
-    </li>
+      </li>
 
-    <!-- To add an app: copy one of the app blocks above, give it its own
-         app-<slug> class, and add that class's accent colours to assets/home.css. -->
+    </ul>
 
-  </ul>
+    <p class="group-label">Websites &amp; platforms</p>
+    <ul class="apps">
+
+      <li class="app app-neutral">
+        <a class="app-head" href="index.html">
+          <div class="tile" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1.6" fill="#fff"/>
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".7"/>
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".7"/>
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".45"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-title-row"><h2>hio-mitos.github.io</h2><span class="status live">Live</span></div>
+            <p class="tagline">This portfolio and documentation home</p>
+          </div>
+        </a>
+        <p class="blurb">The home for every project's documentation: privacy policies, licences,
+        support pages and permanent release histories, with each app in its own design. Plain
+        static HTML on GitHub Pages — no trackers, no web fonts, no third-party requests.</p>
+      </li>
+
+    </ul>
+
+    <!-- MORE GROUPS GO HERE, each as a group-label + <ul class="apps">:
+           "Work in progress"           — add <span class="status wip">In progress</span>, no store link
+           "Experiments"                — scripts and side projects
+         Projects without their own colour use class="app app-neutral". -->
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section id="timeline">
+    <h2 class="section-title">Timeline</h2>
+    <p class="section-intro">Every public release, newest first. Each links to the full notes.</p>
+
+    <!-- NEW ENTRIES GO AT THE TOP. Keep in step with each app's changelog.html. -->
+    <ol class="timeline">
+      <li class="app-space-analyzer">
+        <time datetime="2026-10-03">3 October 2026</time>
+        <div class="what"><a href="space-analyzer/changelog.html#v2.3.10.1">Space Analyzer 2.3.10.1</a></div>
+        <p>Renamed from Disk-Space-Analyzer, with a new icon and much faster scanning.</p>
+      </li>
+      <li class="app-clipboard-typer">
+        <time datetime="2026-10-02">2 October 2026</time>
+        <div class="what"><a href="clipboard-typer/changelog.html#v1.3.2">Clipboard Typer 1.3.2</a></div>
+        <p>A fresh Windows 11-style look and a "Send feedback / report a bug" option in the tray.</p>
+      </li>
+      <li class="app-authbox">
+        <time datetime="2026-09-30">30 September 2026</time>
+        <div class="what"><a href="authbox/changelog.html#v1.1.1">AuthBox 1.1.1</a></div>
+        <p>Report a problem or send feedback from inside the app.</p>
+      </li>
+      <li class="app-authbox">
+        <time datetime="2026-09-15">15 September 2026</time>
+        <div class="what"><a href="authbox/changelog.html#v1.0.0">AuthBox 1.0.0</a></div>
+        <p>First public release.</p>
+      </li>
+      <li class="app-space-analyzer">
+        <time datetime="2026-09-08">8 September 2026</time>
+        <div class="what"><a href="space-analyzer/changelog.html#v2.2.1">Space Analyzer 2.2.1</a></div>
+        <p>Largest Files view, a verified duplicate finder, bulk actions and faster scanning.</p>
+      </li>
+      <li class="app-clipboard-typer">
+        <time datetime="2026-08-12">12 August 2026</time>
+        <div class="what"><a href="clipboard-typer/changelog.html#v1.3.0">Clipboard Typer 1.3.0</a></div>
+        <p>Run at startup fixed, and press and hold Esc to cancel typing.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <h2 class="section-title">About</h2>
+    <p>Hio Mitos is where I publish the software I make. I like tools that do one job well and
+    respect the people who use them: my apps work offline, collect nothing, and say plainly what
+    they do and don't do.</p>
+    <p>Every project here keeps its own documentation, privacy policy and a release history
+    that is never rewritten, so anyone can see exactly what changed, and when.</p>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>For questions about any project, or anything else:
+    <a href="mailto:Hio-Mitos@gladiators.city">Hio-Mitos@gladiators.city</a></p>
+    <p class="section-intro">Each app also has its own support page, linked above.</p>
+  </section>
 
   <footer>
-    <p>Questions about any app: <a href="mailto:Hio-Mitos@gladiators.city">Hio-Mitos@gladiators.city</a></p>
-    <p>Each app also has its own support page, linked above.</p>
+    <p>© 2026 Hio Mitos</p>
   </footer>
 
 </main>

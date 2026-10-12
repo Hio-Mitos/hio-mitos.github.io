@@ -1,12 +1,13 @@
 # hio-mitos.github.io
 
-Documentation and links for the apps I publish on the Microsoft Store.
+The Hio Mitos portfolio: every project published or in progress, plus the documentation
+(privacy, licence, support, release history) for each app.
 Live at <https://hio-mitos.github.io>.
 
 ## Layout
 
 ```
-index.html              Homepage — one card per app
+index.html              Portfolio homepage — projects, timeline, about, contact
 assets/home.css         Homepage design (its own look, not shared with any app)
 assets/theme.js         Light/dark toggle, shared by every page. Loaded in <head>, no defer.
 authbox/                One folder per app, each with its own design
@@ -22,6 +23,21 @@ privacy_AuthBox.html    Redirect kept alive for the old policy URL
 ```
 
 `_template/` and `_drafts/` start with an underscore, so GitHub Pages does not publish them.
+
+## The portfolio homepage
+
+`index.html` has four sections, each marked with a comment:
+
+- **Projects** — grouped under small labels (Windows apps, Websites & platforms, …). A card
+  shows a status chip: `status live` ("Published"/"Live") or `status wip` ("In progress").
+  In-progress projects get no store link. Projects without their own colour use
+  `class="app app-neutral"`; apps with one get an `.app-<slug>` rule in `assets/home.css`.
+- **Timeline** — one entry per public release, newest first, each linking to that release
+  in the app's `changelog.html`. Add an entry whenever you add a release there.
+- **About** and **Contact**.
+
+Groups still to come (see the comment in the Projects section): Work in progress and
+Experiments.
 
 ## Adding a new app
 
