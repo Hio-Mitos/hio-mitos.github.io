@@ -1,4 +1,4 @@
-/* Clipboard Typer — stylesheet for every page in clipboard-typer/.
+/* Clipboard History Typer — stylesheet for every page in clipboard-history-typer/.
    Blue banner design. Each app on hio-mitos.github.io has its own look; only
    assets/theme.js (the light/dark toggle) is shared. */
 
@@ -131,6 +131,13 @@ kbd {
 table { border-collapse: collapse; width: 100%; margin: 8px 0; }
 th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
 th { background: var(--soft); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+.table-scroll table { font-size: 14px; }
+pre {
+  white-space: pre-wrap; overflow-wrap: anywhere;
+  background: var(--soft); border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px 14px; font-size: 13px; line-height: 1.5;
+}
 
 details {
   border: 1px solid var(--line);

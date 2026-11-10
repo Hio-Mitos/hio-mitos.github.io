@@ -20,6 +20,7 @@ authbox/                One folder per app, each with its own design
 _template/              Copy this to start a new app
 _drafts/                Release entries written ahead of certification
 privacy_AuthBox.html    Redirect kept alive for the old policy URL
+clipboard-typer/        Redirects from the app's old name to clipboard-history-typer/
 ```
 
 `_template/` and `_drafts/` start with an underscore, so GitHub Pages does not publish them.
@@ -71,7 +72,7 @@ in place of the Store button. Replace it with the real link once the listing is 
 Live listings:
 
 - AuthBox — <https://apps.microsoft.com/store/detail/9NTHV4CQ7MMR>
-- Clipboard Typer — <https://apps.microsoft.com/store/detail/9PN8744TNJ8V>
+- Clipboard History Typer (formerly "Clipboard Typer") — <https://apps.microsoft.com/store/detail/9PN8744TNJ8V>
 - Space Analyzer (formerly "Disk-Space-Analyzer") — <https://apps.microsoft.com/store/detail/9N1S53NNNBLW>
 
 ## Release history
@@ -117,7 +118,7 @@ There is no comment system on the site; support goes through that mailbox.
 Every app has its own design, and the homepage has a third one:
 
 - `authbox/style.css` — AuthBox: green, rounded cards.
-- `clipboard-typer/style.css` — Clipboard Typer: blue banner header, Segoe UI.
+- `clipboard-history-typer/style.css` — Clipboard History Typer: blue banner header, Segoe UI.
 - `space-analyzer/style.css` — Space Analyzer: amber on charcoal, treemap mosaic header.
 - `assets/home.css` — the homepage: warm paper, serif headings, and each app card in that
   app's own accent colour.
